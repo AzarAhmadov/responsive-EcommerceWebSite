@@ -81,7 +81,6 @@
         }
 
         #main {
-            overflow-x: hidden;
             #banner {
                 background: #f3f2ee;
 
@@ -140,9 +139,7 @@
                 .container {
                     .row {
                         .content-col {
-                            display: flex;
-                            justify-content: center;
-
+                            .img{
                             .img-text {
                                 top: 100px;
                                 left: 50px;
@@ -152,12 +149,32 @@
                                     color: #000;
                                     font-size: 20px;
                                     padding-bottom: 5px;
+                                    margin-bottom: 5px;
                                 }
 
                                 .imgLink {
                                     text-decoration: none;
                                     color: #000;
+                                    position: relative;
+                                    text-transform: uppercase;
+                                    letter-spacing: 2px;
+                                    padding-bottom: 5px;
+                                    
+                                    &::after{
+                                        content:"";
+                                        width: 100px;
+                                        height: 2px;
+                                        background: crimson;
+                                        position: absolute;
+                                        bottom: 0;
+                                        left: 0;
+                                        transition: 300ms all;
+                                    }
+                                    &:hover::after{
+                                        width: 40px;
+                                    }
                                 }
+                            }
                             }
                         }
                     }
@@ -180,18 +197,24 @@
             }
 
             #last {
+                overflow-x: hidden;
                 .container {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
                     .row {
                         .last-col {
+                            display: flex;
+                            justify-content: center;
                             .imgarea {
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 position: relative;
                                 .img-text-area {
-                                    margin-right: 10px;
                                     color: #000;
-                                    width: 330px;
+                                    width:auto;
                                     position: absolute;
                                     bottom: -50px;
                                     padding: 10px 15px;
@@ -316,7 +339,7 @@
         }
 
         @media only screen and (max-width:750px){
-            #main{
+            #main{overflow-x: hidden;
                 #banner{
                     .container-fluid{
                         height: 100vh !important;
@@ -330,9 +353,53 @@
                         }
                     }
                 }
+                #content{
+                    .container{
+                        .row{
+                            .content-col{
+                                .img{
+                                    margin-bottom: 10px;
+                                    .img-text{
+                                        top: 40px;
+                                        span{
+                                            font-size:17px;
+                                        }
+                                        .imgLink{
+                                            font-size: 14px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                #sellers{
+                    .container{
+                        .row{
+                            .sell-col{
+                                .sellers-item{
+                                    margin-top: 20px !important;
+                                }
+                            }
+                        }
+                    }
+                }
+                #last{
+                    padding: 0 !important;
+                    .container{
+                        .row{
+                            .imgarea{
+                                margin:0;
+                                margin-bottom: 70px;
+                            
+                            }
+                        }
+                    }
+                }
             }
 
             #footer{
+                padding: 0;
                 .container{
                     .row{
                         .ft-col{
