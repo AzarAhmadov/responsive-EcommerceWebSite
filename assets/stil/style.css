@@ -50,6 +50,16 @@
   background-color: #fff;
   -webkit-box-shadow: 0 0 22px 0 rgba(0, 0, 0, 0.137);
           box-shadow: 0 0 22px 0 rgba(0, 0, 0, 0.137);
+  -webkit-transition: 400ms ease-in;
+  transition: 400ms ease-in;
+}
+
+* body #header.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
 }
 
 * body #header .logo {

@@ -47,6 +47,14 @@
             z-index: 1000;
             background-color: #fff;
             box-shadow: 0 0 22px 0 rgba(0, 0, 0, 0.137);
+            transition: 400ms ease-in;
+            &.active{
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 2000;
+            }
 
             .logo {
                 color: #000;
