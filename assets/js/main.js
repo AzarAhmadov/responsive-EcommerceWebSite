@@ -10,7 +10,7 @@ let mobilMenu = document.querySelector('#mobil-menu');
 let body = document.querySelector('#body');
 
 opennav.addEventListener('click',() => {
-  mobilMenu.classList.add('active')
+  mobilMenu.classList.toggle('active')
 })
 
 let navLink = document.querySelectorAll('.navLink');
